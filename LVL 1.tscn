@@ -82,7 +82,7 @@ extents = Vector2( 18.6746, 14.1049 )
 1/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 7.06999, 195.246 )
+extents = Vector2( 20.1149, 486.544 )
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 19, 1 )
@@ -101,7 +101,10 @@ position = Vector2( -13, 17 )
 shape = SubResource( 5 )
 
 [node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
+position = Vector2( -14, 16 )
+scale = Vector2( 0.64, 1 )
 current = true
+zoom = Vector2( 0.5, 0.5 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
@@ -119,12 +122,30 @@ tile_data = PoolIntArray( 1, 0, 0, 65537, 1, 0 )
 position = Vector2( 48, 170 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="left_wall"]
-position = Vector2( 2, 24 )
+position = Vector2( -12, 24 )
 shape = SubResource( 4 )
 
-[node name="left_wall" type="StaticBody2D" parent="left_wall"]
-position = Vector2( 966, -3 )
+[node name="right_wall" type="StaticBody2D" parent="."]
+position = Vector2( 1014, 167 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="left_wall/left_wall"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right_wall"]
+position = Vector2( 13, 24 )
+shape = SubResource( 4 )
+
+[node name="upper_wall" type="StaticBody2D" parent="."]
+position = Vector2( 561, -17 )
+rotation = 0.785398
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="upper_wall"]
+position = Vector2( 2, 24 )
+rotation = 0.785398
+shape = SubResource( 4 )
+
+[node name="lower_wall" type="StaticBody2D" parent="."]
+position = Vector2( 546.708, 397.666 )
+rotation = 1.5708
+scale = Vector2( 1, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lower_wall"]
 position = Vector2( 2, 24 )
 shape = SubResource( 4 )
