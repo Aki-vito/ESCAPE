@@ -1,10 +1,14 @@
 extends KinematicBody2D
 
+export (int) var speed = 200
+var velocity = Vector2()
+
 
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-
+func get_input():
+	velocity = Vector2()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
