@@ -97,7 +97,7 @@ scale = Vector2( 0.586147, 0.445437 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
-position = Vector2( -13, 17 )
+position = Vector2( -13.1575, 17.5275 )
 shape = SubResource( 5 )
 
 [node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
