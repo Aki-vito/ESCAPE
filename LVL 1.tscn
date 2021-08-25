@@ -4,10 +4,10 @@
 [ext_resource path="res://Player.gd" type="Script" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 18.6746, 14.1049 )
 
-[sub_resource type="TileSet" id=5]
+[sub_resource type="TileSet" id=2]
 0/name = "0x72_DungeonTilesetII_v1.4.png 0"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
@@ -123,10 +123,10 @@ extents = Vector2( 18.6746, 14.1049 )
 3/shapes = [  ]
 3/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 18.3366, 486.544 )
 
-[sub_resource type="TileSet" id=7]
+[sub_resource type="TileSet" id=5]
 0/name = "0x72_DungeonTilesetII_v1.4.png 0"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
@@ -156,7 +156,7 @@ texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
 position = Vector2( -13.1575, 17.5275 )
-shape = SubResource( 4 )
+shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
 position = Vector2( -14, 16 )
@@ -166,7 +166,7 @@ zoom = Vector2( 0.5, 0.5 )
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( 0.943878, 3.7755 )
-tile_set = SubResource( 5 )
+tile_set = SubResource( 2 )
 cell_size = Vector2( 48, 19 )
 format = 1
 tile_data = PoolIntArray( 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 21, 2, 0, 65537, 2, 0, 65557, 2, 0, 131073, 2, 0, 131093, 2, 0, 196609, 2, 0, 196629, 2, 0, 262145, 2, 0, 262165, 2, 0, 327681, 2, 0, 327701, 2, 0, 393217, 2, 0, 393237, 2, 0, 458753, 2, 0, 458773, 2, 0, 524289, 2, 0, 524309, 2, 0, 589825, 2, 0, 589845, 2, 0, 655361, 2, 0, 655381, 2, 0, 720897, 2, 0, 720917, 2, 0, 786433, 2, 0, 786453, 2, 0, 851969, 2, 0, 851989, 2, 0, 917505, 2, 0, 917525, 2, 0, 983041, 2, 0, 983061, 2, 0, 1048577, 2, 0, 1048597, 2, 0, 1114113, 2, 0, 1114133, 2, 0, 1179649, 2, 0, 1179669, 2, 0, 1245185, 2, 0, 1245205, 2, 0, 1310721, 0, 0, 1310722, 0, 0, 1310723, 0, 0, 1310724, 0, 0, 1310725, 0, 0, 1310726, 0, 0, 1310727, 0, 0, 1310728, 0, 0, 1310729, 0, 0, 1310730, 0, 0, 1310731, 0, 0, 1310732, 0, 0, 1310733, 0, 0, 1310734, 0, 0, 1310735, 0, 0, 1310736, 0, 0, 1310737, 0, 0, 1310738, 0, 0, 1310739, 0, 0, 1310740, 0, 0 )
@@ -183,14 +183,14 @@ position = Vector2( 48, 170 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="left_wall"]
 position = Vector2( -12, 24 )
-shape = SubResource( 6 )
+shape = SubResource( 4 )
 
 [node name="right_wall" type="StaticBody2D" parent="."]
 position = Vector2( 1014, 167 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="right_wall"]
 position = Vector2( 13, 24 )
-shape = SubResource( 6 )
+shape = SubResource( 4 )
 
 [node name="upper_wall" type="StaticBody2D" parent="."]
 position = Vector2( 561, -17 )
@@ -199,7 +199,7 @@ rotation = 0.785398
 [node name="CollisionShape2D" type="CollisionShape2D" parent="upper_wall"]
 position = Vector2( 2, 24 )
 rotation = 0.785398
-shape = SubResource( 6 )
+shape = SubResource( 4 )
 
 [node name="lower_wall" type="StaticBody2D" parent="."]
 position = Vector2( 546.708, 397.666 )
@@ -207,10 +207,10 @@ rotation = 1.5708
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="lower_wall"]
 position = Vector2( 2, 24 )
-shape = SubResource( 6 )
+shape = SubResource( 4 )
 
 [node name="TileMap3" type="TileMap" parent="."]
 position = Vector2( -6.26459, -15 )
-tile_set = SubResource( 7 )
+tile_set = SubResource( 5 )
 format = 1
 tile_data = PoolIntArray( 8, 0, 0 )
