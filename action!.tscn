@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://0x72_DungeonTilesetII_v1.4/frames/big_demon_idle_anim_f3.png" type="Texture" id=1]
+[ext_resource path="res://0x72_DungeonTilesetII_v1.4/frames/big_demon_idle_anim_f0.png" type="Texture" id=2]
+[ext_resource path="res://0x72_DungeonTilesetII_v1.4/frames/big_demon_idle_anim_f2.png" type="Texture" id=3]
+[ext_resource path="res://0x72_DungeonTilesetII_v1.4/frames/big_demon_idle_anim_f1.png" type="Texture" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[node name="actor" type="KinematicBody2D"]
+position = Vector2( 123.423, 62.1797 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "idle"
+frame = 2
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -5.80595, -8.0534 )
+shape = SubResource( 2 )
