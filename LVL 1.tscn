@@ -8,3 +8,6 @@
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
 shape = SubResource( 1 )
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 1
