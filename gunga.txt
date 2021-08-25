@@ -1,0 +1,16 @@
+ETG gibi
+Separate rooms
+Puzzle in each room to get a part of the key
+gather all parts to win
+
+
+1- Setting up the enviroment: Player, enemies, background etc etc etc
+2- Prototyping movement and collisions
+3- Git 
+
+
+2-A: - Player sprite[box], moving up/down/left/right. DONE
+2-B: - Player interaction with walls and objects 
+1-A: - Creating a box with puzzle
+2-C: - Player interaction with the box and taking of the key
+2-D: - Playing door animation when key is aquired and player is close
