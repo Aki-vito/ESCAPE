@@ -14,3 +14,6 @@ texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PLAYER"]
 shape = SubResource( 1 )
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 1
