@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 export (int) var speed = 200
 var velocity = Vector2()
-
+onready var animatedplayer = $AnimationPlayer
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -11,6 +11,7 @@ func get_input():
 	velocity = Vector2()
 	if Input.is_action_pressed("right"):
 		velocity.x += 1
+
 	if Input.is_action_pressed("left"):
 		velocity.x -= 1
 	if Input.is_action_pressed("down"):
