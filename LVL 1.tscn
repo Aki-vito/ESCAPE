@@ -179,7 +179,7 @@ zoom = Vector2( 0.5, 0.5 )
 anims/Running = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="Player"]
-position = Vector2( -19.5508, 19.9713 )
+position = Vector2( -19.3406, 21.2326 )
 texture = ExtResource( 3 )
 hframes = 8
 
