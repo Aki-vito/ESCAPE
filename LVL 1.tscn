@@ -95,7 +95,7 @@ animations = [ {
 "name": "New Anim",
 "speed": 5.0
 } ]
-=======
+
 [sub_resource type="Animation" id=2]
 resource_name = "Running"
 length = 1.75
