@@ -9,7 +9,7 @@ extents = Vector2( 12.7951, 14.1049 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "Running"
-length = 6.0
+length = 1.75
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -182,6 +182,7 @@ anims/Running = SubResource( 2 )
 position = Vector2( -19.3406, 21.2326 )
 texture = ExtResource( 3 )
 hframes = 8
+frame = 7
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( 0.943878, 3.7755 )
