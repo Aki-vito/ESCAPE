@@ -6,12 +6,15 @@ onready var animatedplayer = $AnimationPlayer
 
 # Declare member variables here. Examples:
 # var a = 2
-# var b = "text"
+
+
+
+
 func get_input():
 	velocity = Vector2()
 	if Input.is_action_pressed("right"):
 		velocity.x += 1
-
+		animatedplayer.play('Running')
 	if Input.is_action_pressed("left"):
 		velocity.x -= 1
 	if Input.is_action_pressed("down"):
@@ -19,7 +22,14 @@ func get_input():
 	if Input.is_action_pressed("up"):
 		velocity.y -= 1
 	velocity = velocity.normalized() * speed
+	
+	
+
+	
+		
+		
 # Called when the node enters the scene tree for the first time
+# warning-ignore:unused_argument
 func _physics_process(delta):
 	get_input()
 	velocity = move_and_slide(velocity)
