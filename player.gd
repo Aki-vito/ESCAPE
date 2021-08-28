@@ -28,3 +28,10 @@ func _physics_process(delta):
 		anim.flip_h = true	
 	elif axisX == 0 and hito == false:
 		anim.animation = "idle"		
+
+
+#func _on_Object_body_entered(body):
+#	hide() # Replace with function body.
+
+
+# Replace with function body.
