@@ -1,7 +1,8 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Knight/noBKG_KnightIdle_strip.png" type="Texture" id=1]
 [ext_resource path="res://Knight/noBKG_KnightRun_strip.png" type="Texture" id=2]
+[ext_resource path="res://player.gd" type="Script" id=3]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -128,20 +129,21 @@ animations = [ {
 "frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
 "loop": true,
 "name": "run",
-"speed": 5.0
+"speed": 7.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=25]
 extents = Vector2( 10, 19.1173 )
 
 [node name="player" type="KinematicBody2D"]
-position = Vector2( 488.154, 219.87 )
+position = Vector2( 490.154, 219.87 )
+script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 3.58441, 0.980606 )
 frames = SubResource( 16 )
 animation = "run"
-frame = 1
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
