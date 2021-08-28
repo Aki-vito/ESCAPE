@@ -19,7 +19,6 @@ shape = SubResource( 1 )
 texture = ExtResource( 1 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-speed = null
 
 [connection signal="body_entered" from="zozo" to="player" method="_on_Object_body_entered"]
 [connection signal="body_exited" from="zozo" to="player" method="_on_Object_body_exited"]
