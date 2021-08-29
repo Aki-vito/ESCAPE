@@ -61,34 +61,19 @@ flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 1458, 0, 162, 162 )
 
-[sub_resource type="AtlasTexture" id=71]
+[sub_resource type="AtlasTexture" id=117]
 flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 162, 162 )
 
-[sub_resource type="AtlasTexture" id=72]
+[sub_resource type="AtlasTexture" id=118]
 flags = 4
 atlas = ExtResource( 4 )
 region = Rect2( 162, 0, 162, 162 )
 
-[sub_resource type="AtlasTexture" id=73]
+[sub_resource type="AtlasTexture" id=119]
 flags = 4
 atlas = ExtResource( 4 )
-region = Rect2( 324, 0, 162, 162 )
-
-[sub_resource type="AtlasTexture" id=74]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 0, 0, 162, 162 )
-
-[sub_resource type="AtlasTexture" id=75]
-flags = 4
-atlas = ExtResource( 5 )
-region = Rect2( 162, 0, 162, 162 )
-
-[sub_resource type="AtlasTexture" id=76]
-flags = 4
-atlas = ExtResource( 5 )
 region = Rect2( 324, 0, 162, 162 )
 
 [sub_resource type="AtlasTexture" id=77]
@@ -251,6 +236,21 @@ flags = 4
 atlas = ExtResource( 10 )
 region = Rect2( 324, 0, 162, 162 )
 
+[sub_resource type="AtlasTexture" id=120]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 162, 162 )
+
+[sub_resource type="AtlasTexture" id=121]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 162, 0, 162, 162 )
+
+[sub_resource type="AtlasTexture" id=122]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 324, 0, 162, 162 )
+
 [sub_resource type="AtlasTexture" id=99]
 flags = 4
 atlas = ExtResource( 6 )
@@ -298,40 +298,45 @@ animations = [ {
 "name": "idle",
 "speed": 8.0
 }, {
-"frames": [ SubResource( 71 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ) ],
+"frames": [ SubResource( 117 ), SubResource( 118 ), SubResource( 119 ) ],
 "loop": true,
 "name": "jump",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [ SubResource( 77 ), SubResource( 78 ), SubResource( 79 ), SubResource( 80 ), SubResource( 81 ), SubResource( 82 ), SubResource( 83 ) ],
 "loop": true,
 "name": "attack1",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [ SubResource( 84 ), SubResource( 85 ), SubResource( 86 ), SubResource( 87 ), SubResource( 88 ), SubResource( 89 ), SubResource( 90 ), SubResource( 91 ) ],
 "loop": true,
 "name": "run",
-"speed": 5.0
+"speed": 9.0
 }, {
 "frames": [ SubResource( 92 ), SubResource( 93 ), SubResource( 94 ), SubResource( 95 ), SubResource( 96 ), SubResource( 97 ), SubResource( 98 ) ],
 "loop": true,
 "name": "attack2",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [ SubResource( 107 ), SubResource( 108 ), SubResource( 109 ), SubResource( 110 ), SubResource( 111 ), SubResource( 112 ), SubResource( 113 ) ],
 "loop": true,
 "name": "death",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [ SubResource( 114 ), SubResource( 115 ), SubResource( 116 ) ],
 "loop": true,
 "name": "takehit",
 "speed": 5.0
 }, {
+"frames": [ SubResource( 120 ), SubResource( 121 ), SubResource( 122 ) ],
+"loop": true,
+"name": "fall",
+"speed": 3.0
+}, {
 "frames": [ SubResource( 99 ), SubResource( 100 ), SubResource( 101 ), SubResource( 102 ), SubResource( 103 ), SubResource( 104 ), SubResource( 105 ), SubResource( 106 ) ],
 "loop": true,
 "name": "attack3",
-"speed": 5.0
+"speed": 8.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=60]
@@ -347,8 +352,8 @@ scale = Vector2( 1.01094, 1 )
 z_index = 5
 z_as_relative = false
 frames = SubResource( 59 )
-animation = "takehit"
-frame = 2
+animation = "idle"
+frame = 9
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
