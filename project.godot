@@ -14,6 +14,10 @@ config/name="Escape"
 run/main_scene="res://trainging_ground.tscn"
 config/icon="res://icon.png"
 
+[gui]
+
+theme/use_hidpi=true
+
 [input]
 
 up={

@@ -8,6 +8,7 @@ onready var zozo = get_node("/root/Node2D/zozo")
 var hito = false
 var hito2 = false
 var hito3 = false
+onready var zoza = get_node("/root/Node2D/zozo")
 func get_input():
 	var axisa = Input.get_action_strength("right") - Input.get_action_strength("left")
 	velo = Vector2()
@@ -35,6 +36,7 @@ func get_input():
 
 func _physics_process(delta):
 	var axisX = Input.get_action_strength("right") - Input.get_action_strength("left")
+	
 	get_input()
 	velo = move_and_slide(velo)
 	if axisX > 0 and hito == false and hito2 == false and hito3 == false:
@@ -45,20 +47,28 @@ func _physics_process(delta):
 		anim.flip_h = true	
 	elif axisX == 0 and hito == false and hito2 == false and hito3 == false:
 		anim.animation = "idle"
-	 
-	
-	
 	_dies()
 
-func _on_Object_body_entered(body):
-		entered = true
-func _on_Object_body_exited(body):
-		entered = false
+func _on_zozo_body_entered(body):
+	entered = true
+	
+
+func _on_zozo_body_exited(body):
+	entered = false
+
 func _dies():
 	if entered == true:
-		if anim.get_animation() == "attack":
-			yield(get_tree().create_timer(1.15), "timeout")
-
-			zozo.hide()			
+		if anim.get_animation() == "attack1" or anim.get_animation() == "attack2" or anim.get_animation() == "attack3":
+			print("yayayaya")
+			yield(get_tree().create_timer(0.4), "timeout")
+			zoza.get_node("AnimatedSprite").play("ghit")
+			yield(get_tree().create_timer(0.9), "timeout")
+			zoza.get_node("AnimatedSprite").play("gdeath") 
+			yield(get_tree().create_timer(0.8), "timeout")
+			zoza.hide()
+			
+			
 		
+
+
 
